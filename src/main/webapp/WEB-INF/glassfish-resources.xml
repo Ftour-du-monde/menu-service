@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC
+        "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN"
+        "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+    <jdbc-connection-pool name="menuPool"
+                          datasource-classname="com.mysql.cj.jdbc.MysqlDataSource"
+                          res-type="javax.sql.DataSource">
+        <property name="serverName" value="mysql-dashmed.alwaysdata.net"/>
+        <property name="portNumber" value="3306"/>
+        <property name="databaseName" value="dashmed_nom_du_projet"/>
+        <property name="user" value="dashmed"/>
+        <property name="password" value="lemdpilesttarpinsecurewola"/>
+        <property name="useSSL" value="false"/>
+        <property name="sslMode" value="DISABLED"/>
+        <property name="allowPublicKeyRetrieval" value="true"/>
+        <property name="serverTimezone" value="UTC"/>
+    </jdbc-connection-pool>
+
+    <jdbc-resource jndi-name="jdbc/menuDS" pool-name="menuPool"/>
+</resources>
